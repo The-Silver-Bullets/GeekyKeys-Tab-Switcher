@@ -1,0 +1,61 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tab Switcher for Google Search.",
+  "description": "Allows user to switch through all results, images, videos and news tabs in google search.",
+  "version": "1.0",
+  "background": {
+   
+    "scripts": ["background.js"],
+    "persistent": false
+  
+	},
+  "page_action" :
+  {
+    "default_icon" : "icon-16.png",
+    "default_title" : "Click here!",
+    "default_popup": "popup.html"
+  },
+
+  "icons" : {
+    "32" : "icon-32.png"
+  },
+  
+  "commands": {
+    "open_image": {
+      "suggested_key": { 
+      "default": "Alt+Shift+P", 
+      "mac": "Command + Shift + 1"
+    },
+      "description": "To open images of a search."
+    },
+
+    "open_videos": {
+      "suggested_key": { "default": "Alt+Shift+V" ,
+        "mac": "Command + Shift + 2"
+      },
+      "description": "To open videos of a search."
+    },
+
+    "open_news": {
+      "suggested_key": { "default": "Alt+Shift+N" ,
+        "mac": "Command + Shift + 7"
+    },
+      "description": "To open news of a search."
+    },
+
+    "open_all": {
+      "suggested_key": { "default": "Alt+Shift+E" ,
+        "mac": "Command + Shift + 8"
+      },
+      "description": "To open all of a search."
+    }
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+	  "tabs",
+    "declarativeContent"
+  ]
+}
